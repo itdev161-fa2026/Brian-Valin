@@ -1,3 +1,4 @@
 {
-    "mongoURL": "mongodb+srv://bvalin99:Engineer99a@valincluster0.s13qtut.mongodb.net/?retryWrites=true&w=majority&appName=ValinCluster0"
+    "mongoURL": "mongodb+srv://bvalin99:Engineer99a@valincluster0.s13qtut.mongodb.net/?retryWrites=true&w=majority&appName=ValinCluster0",
+    "JWT_Secret": "Computer99a"
 }
