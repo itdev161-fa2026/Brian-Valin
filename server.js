@@ -7,13 +7,20 @@ import jwt from 'jsonwebtoken';
 import dotenv from 'dotenv';
 import Post from './models/Post.js';
 import auth from './middleware/auth.js';
+import cors from 'cors';
 
 dotenv.config();
 
+// Initialize express application
 const app = express();
 
+// Connect to the database
 connectDatabase();
 
++ // Enable CORS
++ app.use(cors());
+
+// Configure Middleware
 app.use(express.json({ extended: false }));
 
 /**
@@ -59,9 +66,11 @@ app.post('/api/users', [
 
         await user.save();
 
+        //Create JWT payload
         const payload = {
             user: {
-                id: user.id
+                id: user.id,
+                name: user.name
             }
         };
 
@@ -110,9 +119,11 @@ app.post('/api/auth', [
             });
         }
 
+        //Create JWT payload
         const payload = {
             user: {
-                id: user.id
+                id: user.id,
+                name: user.name
             }
         };
 
