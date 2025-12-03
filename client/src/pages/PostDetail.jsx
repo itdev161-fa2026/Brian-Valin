@@ -3,6 +3,7 @@ import { useParams, useNavigate } from 'react-router-dom';
 import { getPostById, deletePost } from '../services/api';
 import { AuthContext } from '../context/authContext';
 import './PostDetail.css';
+import {format, formatDistance} from 'date-fns';
 
 const PostDetail = () => {
     const { id } = useParams();
@@ -29,11 +30,6 @@ const PostDetail = () => {
 
         fetchPost();
     }, [id]);
-
-    const formatDate = (dateString) => {
-        const options = { year: 'numeric', month: 'long', day: 'numeric', hour: '2-digit', minute: '2-digit' };
-        return new Date(dateString).toLocaleDateString(undefined, options);
-    };
 
 const handleEdit = () => {
     navigate(`/posts/${id}/edit`);
@@ -84,7 +80,8 @@ const canModify = user && post && user.id === post.user._id;
                 <h1>{post.title}</h1>
                 <div className="post-detail-meta">
                     <span className="post-detail-author">By {post.user?.name || 'Unknown'}</span>
-                    <span className="post-detail-date">{formatDate(post.createDate)}</span>
+                    <span className="post-date">{formatDistance(post.createDate, new Date(), {addSuffix: true})} </span>
+                    <span className="post-detail-date">{format(post.createDate, 'LLL dd, yyyy')}</span>
                 </div>
                 <div className="post-detail-body">
                     {post.body.split('\n').map((paragraph, index) => (

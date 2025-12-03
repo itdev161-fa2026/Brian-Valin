@@ -1,15 +1,17 @@
+@import '../../../root.css';
+
 .post-card {
-    background: white;
+    background: var(--white);
     border-radius: 8px;
     padding: 1.5rem;
     margin-bottom: 1.5rem;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 8px var(--black-shadow);
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .post-card:hover {
     transform: translateY(-4px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 4px 12px var(--black-shadow);
 }
 
 .post-card-link {
@@ -20,7 +22,7 @@
 
 .post-card h2 {
     margin: 0 0 0.5rem 0;
-    color: #282c34;
+    color: var(--dark-blue);
     font-size: 1.5rem;
 }
 
@@ -29,7 +31,7 @@
     gap: 1rem;
     margin-bottom: 1rem;
     font-size: 0.9rem;
-    color: #666;
+    color: var(--grey);
 }
 
 .post-author {
@@ -37,13 +39,13 @@
 }
 
 .post-preview {
-    color: #444;
+    color: var(--grey);
     line-height: 1.6;
     margin-bottom: 0.5rem;
 }
 
 .read-more {
-    color: #61dafb;
+    color: var(link-blue);
     font-weight: 500;
 }
 

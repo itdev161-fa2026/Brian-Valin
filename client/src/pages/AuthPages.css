@@ -1,3 +1,5 @@
+@import '../../../root.css';
+
 .auth-page {
     min-height: calc(100vh - 80px);
     display: flex;
@@ -12,12 +14,12 @@
 }
 
 .auth-switch p {
-    color: #666;
+    color: var(--grey);
     font-size: 0.95rem;
 }
 
 .auth-switch a {
-    color: #61dafb;
+    color: var(--link-blue);
     text-decoration: none;
     font-weight: 600;
 }
