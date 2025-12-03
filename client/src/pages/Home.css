@@ -1,3 +1,5 @@
+@import '../../../root.css';
+
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -12,14 +14,14 @@
 }
 
 .home-header h1 {
-    color: #282c34;
+    color: var(--dark-blue);
     margin: 0;
 }
 
 .create-post-button {
     padding: 0.75rem 1.5rem;
-    background-color: #61dafb;
-    color: #282c34;
+    background-color: var(--link-blue);
+    color: var(--dark-blue);
     border: none;
     border-radius: 4px;
     font-size: 1rem;
@@ -29,18 +31,18 @@
 }
 
 .create-post-button:hover {
-    background-color: #21a1c4;
+    background-color: var(--link-hover);
 }
 
 .auth-message {
-    color: #666;
+    color: var(--grey);
     font-size: 1rem;
     margin: 0;
     
 }
 
 .auth-message a {
-    color: #61dafb;
+    color: var(--link-blue);
     text-decoration: none;
     font-weight: 600;
     
@@ -59,13 +61,13 @@
 }
 
 .error {
-    color: #d32f2f;
+    color: var(--error-red);
 }
 
 .no-posts {
     text-align: center;
     margin-top: 3rem;
-    color: #666;
+    color: var(--grey);
 }
 
 .posts-list {
