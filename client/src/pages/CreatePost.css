@@ -1,4 +1,4 @@
-@import '../../../root.css';
+@import '../../darkmode.css';
 
 .create-post-page {
     min-height: calc(100vh - 80px);
