@@ -80,7 +80,7 @@ const canModify = user && post && user.id === post.user._id;
                 <h1>{post.title}</h1>
                 <div className="post-detail-meta">
                     <span className="post-detail-author">By {post.user?.name || 'Unknown'}</span>
-                    <span className="post-detail-date">{format(post.createDate, 'LLL dd, yyyy')}</span>
+                    <span className="post-detail-date">{format(post.createDate, 'LLL dd, yyyy')}</span> {/* Date of post - always displayed */}
                 </div>
                 <div className="post-detail-body">
                     {post.body.split('\n').map((paragraph, index) => (
