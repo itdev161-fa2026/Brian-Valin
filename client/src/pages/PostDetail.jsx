@@ -3,7 +3,7 @@ import { useParams, useNavigate } from 'react-router-dom';
 import { getPostById, deletePost } from '../services/api';
 import { AuthContext } from '../context/authContext';
 import './PostDetail.css';
-import {format, formatDistance} from 'date-fns';
+import {format} from 'date-fns';
 
 const PostDetail = () => {
     const { id } = useParams();
@@ -80,8 +80,7 @@ const canModify = user && post && user.id === post.user._id;
                 <h1>{post.title}</h1>
                 <div className="post-detail-meta">
                     <span className="post-detail-author">By {post.user?.name || 'Unknown'}</span>
-                    <span className="post-date">{formatDistance(post.createDate, new Date(), {addSuffix: true})} </span>
-                    <span className="post-detail-date">{format(post.createDate, 'LLL dd, yyyy')}</span>
+                    <span className="post-detail-date">{format(post.createDate, 'LLL dd, yyyy')}</span> {/* Date of post - always displayed */}
                 </div>
                 <div className="post-detail-body">
                     {post.body.split('\n').map((paragraph, index) => (

@@ -1,4 +1,4 @@
-@import '../../root.css';
+@import '../darkmode.css';
 
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
@@ -17,11 +17,11 @@
 
 a {
   font-weight: 500;
-  color: var(--blue-purple);
+  color: var(--link-blue);    /* Blue-purple */
   text-decoration: inherit;
 }
 a:hover {
-  color: var(--blue-purple);
+  color: var(--link-hover);  /* Blue-purple */
 }
 
 body {
@@ -49,7 +49,7 @@ button {
   transition: border-color 0.25s;
 }
 button:hover {
-  border-color: var(--blue-purple);
+  border-color: var(--link-blue); /* Blue-purple */
 }
 button:focus,
 button:focus-visible {
@@ -62,7 +62,7 @@ button:focus-visible {
     background-color: var(--white);
   }
   a:hover {
-    color: var(--blue-purple);
+    color: var(--link-blue); /* Blue-purple */
   }
   button {
     background-color: var(--white);

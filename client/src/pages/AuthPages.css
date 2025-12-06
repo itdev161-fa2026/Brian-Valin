@@ -1,4 +1,4 @@
-@import '../../../root.css';
+@import '../../darkmode.css';
 
 .auth-page {
     min-height: calc(100vh - 80px);

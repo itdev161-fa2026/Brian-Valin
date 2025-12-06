@@ -1,8 +1,8 @@
-/* @import '../../../root.css'; */
-/* @import '../../root.css'; */
+/* default and dark mode color variables */
 
 :root {
     --dark-blue: #282c34;
+    --dark-blue-text: #282c34;
     --white: white;
     --white-trans: rgba(255, 255, 255, 0.87);
     --silver: #e0e0e0;
@@ -10,14 +10,14 @@
     --black: black;
     --black-shadow: rgba(0, 0, 0, 0.1);
 
-    --blue-purple: #535bf2;
     --link-blue: #61dafb;
     --link-hover: #21a1c4;
     --error-red: #d32f2f;
 }
 
 .darkmode {
-    --dark-blue: #9dbcd4;
+    --dark-blue: #E5F3FD;
+    --dark-blue-text: black;
     --white: black;
     --white-trans: rgba(0, 0, 0, 0.87);
     --silver: #666;
@@ -25,9 +25,8 @@
     --black: white;
     --black-shadow: rgba(255, 255, 255, 1);
 
-    --blue-purple: #535bf2;
-    --link-blue: #007596;
-    --link-hover: #002b36;
+    --link-blue: #21a1c4;
+    --link-hover: #61dafb;
     --error-red: #d32f2f;
 }
 
@@ -43,7 +42,6 @@
     position: fixed;
     bottom: 20px;
     left: 20px;
-
 }
 #theme-switch svg {
     fill: var(--silver);

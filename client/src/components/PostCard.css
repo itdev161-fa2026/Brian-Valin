@@ -1,4 +1,4 @@
-@import '../../../root.css';
+@import '../../darkmode.css';
 
 .post-card {
     background: var(--white);
@@ -51,4 +51,16 @@
 
 .post-card:hover .read-more {
     text-decoration: underline;
+}
+
+.post-date-hover {
+    display: none;
+}
+
+.post-meta:hover .post-date {
+    display: none;
+}
+
+.post-meta:hover .post-date-hover {
+    display: block;
 }
